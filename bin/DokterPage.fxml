@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="DokterController">
+   <children>
+      <Text layoutX="14.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Dokter:" />
+       <TableView fx:id="dokterTableView" layoutX="236.0" layoutY="40.0" prefHeight="200.0" prefWidth="303.0">
+        <columns>
+          <TableColumn fx:id="jadwalColumn" prefWidth="95.0" text="Jadwal" />
+          <TableColumn fx:id="pasienColumn" prefWidth="91.0" text="Pasien" />
+            <TableColumn fx:id="ruanganColumn" prefWidth="88.0" text="Ruangan" />
+        </columns>
+      </TableView>
+      <DatePicker fx:id="jadwal" layoutX="19.0" layoutY="87.0" />
+      <TextField fx:id="namatTF" layoutX="19.0" layoutY="140.0" prefHeight="26.0" prefWidth="186.0" />
+      <TextField fx:id="ruanganTF" layoutX="19.0" layoutY="188.0" prefHeight="26.0" prefWidth="186.0" />
+      <Button fx:id="addBtn" layoutX="24.0" layoutY="240.0" mnemonicParsing="false" text="Add" onAction="#addJadwal"/>
+      <Button fx:id="uptBtn" layoutX="85.0" layoutY="241.0" mnemonicParsing="false" text="Update" onAction="#updateJadwal"/>
+      <Button fx:id="delBtn" layoutX="161.0" layoutY="241.0" mnemonicParsing="false" text="Delete" onAction="#deleteJadwal"/>
+   </children>
+</AnchorPane>
